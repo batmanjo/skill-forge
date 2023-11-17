@@ -3,6 +3,7 @@ package com.tech.skill.forge.controller;
 import com.tech.skill.forge.entity.User;
 import com.tech.skill.forge.service.db.UserSecureService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -20,9 +21,9 @@ public class UserController {
     UserSecureService userSecureService;
 
     @GetMapping("/register")
-    public String register(){
+    public String register(@RequestParam("id") String accountId) {
         User user = new User();
-        user.setAccountId("1");
+        user.setAccountId(accountId);
         user.setNickname("king");
         user.setPassword("123456");
         user.setCreateTime(new Date());

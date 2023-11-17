@@ -17,7 +17,7 @@ class SkillForgeApplicationTests {
     @Test
     void contextLoads() {
         User user = new User();
-        user.setAccountId("2");
+        user.setAccountId("3");
         user.setNickname("kong");
         user.setPassword("123456");
         user.setCreateTime(new Date());
