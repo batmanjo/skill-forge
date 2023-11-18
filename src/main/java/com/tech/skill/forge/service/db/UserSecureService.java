@@ -1,10 +1,13 @@
 package com.tech.skill.forge.service.db;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tech.skill.forge.entity.User;
 import com.tech.skill.forge.mapper.UserMapper;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author yanmiao.wu
@@ -12,5 +15,15 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserSecureService extends ServiceImpl<UserMapper, User> {
+
+    public User getUserByAccountId(String accountId){
+        return this.getBaseMapper().selectOne(Wrappers.<User>lambdaQuery()
+                .eq(User::getAccountId,accountId));
+    }
+
+    public List<User> getUsersByTime(Date startTime,Date endTime){
+        return this.baseMapper.selectList(Wrappers.<User>lambdaQuery()
+                .between(User::getCreateTime,startTime,endTime));
+    }
 
 }
