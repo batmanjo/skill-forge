@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8082
   servlet:
     context-path: /
   shutdown: graceful  #默认immediate
@@ -65,3 +65,8 @@ spring:
         allow: 127.0.0.1 # 允许访问的地址，如果allow没有配置或者为空，则允许所有访问
   flyway:
     enabled: true
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 1
