@@ -29,7 +29,7 @@ public class DruidConfig {
     @Bean
     public ServletRegistrationBean<Servlet> druidServlet() {
         // 进行 druid 监控的配置处理
-        ServletRegistrationBean<Servlet> srb = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/**");
+        ServletRegistrationBean<Servlet> srb = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
         // 白名单
         srb.addInitParameter("allow", "127.0.0.1");
         // 黑名单
