@@ -15,6 +15,17 @@ server:
 
 
 spring:
+  application:
+    name: skill-forge
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      discovery:
+        enabled: true
+        namespace: skill-forge-dev
+        cluster-name: CN
   shardingsphere:
     enabled: false
   datasource:
