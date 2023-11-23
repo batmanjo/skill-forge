@@ -26,6 +26,10 @@ spring:
         enabled: true
         namespace: skill-forge-dev
         cluster-name: CN
+      config:
+        enabled: true
+        namespace: skill-forge-dev
+        file-extension: yml
   shardingsphere:
     enabled: false
   datasource:
