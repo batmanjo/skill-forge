@@ -1,0 +1,32 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /
+  shutdown: graceful  #默认immediate
+  tomcat:
+    mbeanregistry:
+      enabled: true #监控tomcat相关指标
+    accept-count: 200 # 等待队列长度，默认100。
+    max-connections: 1000 # 最大可被连接数，默认8192
+    threads:
+      max: 500 # 最大工作线程数，默认200,
+      min-spare: 100 # 最小工作线程数，初始化分配线程数，默认10
+    connection-timeout: 20000 #socket进入connection队列的最大时间
+
+
+spring:
+  application:
+    name: skill-forge
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      discovery:
+        enabled: true
+        namespace: skill-forge-dev
+        cluster-name: CN
+      config:
+        enabled: true
+        namespace: skill-forge-dev
+        file-extension: yml
