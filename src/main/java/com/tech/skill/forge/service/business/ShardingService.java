@@ -1,4 +1,4 @@
-package com.tech.skill.forge.service.db.business;
+package com.tech.skill.forge.service.business;
 
 import com.tech.skill.forge.entity.User;
 import com.tech.skill.forge.service.db.UserSecureService;
@@ -7,6 +7,7 @@ import org.apache.shardingsphere.api.sharding.hint.HintShardingAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -17,7 +18,7 @@ import java.util.Date;
 @Service
 public class ShardingService {
 
-    @Autowired
+    @Resource
     UserSecureService userSecureService;
 
     /**
@@ -51,10 +52,4 @@ public class ShardingService {
         return user;
     }
 
-    public static void main(String[] args) {
-        int i = "222".hashCode();
-        int i1 = Math.abs(i) % 4;
-        System.out.println(i1
-        );
-    }
 }

@@ -1,10 +1,8 @@
 package com.tech.skill.forge;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.tech.skill.forge.entity.User;
 import com.tech.skill.forge.service.db.UserSecureService;
-import com.tech.skill.forge.service.db.business.ShardingService;
+import com.tech.skill.forge.service.business.ShardingService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

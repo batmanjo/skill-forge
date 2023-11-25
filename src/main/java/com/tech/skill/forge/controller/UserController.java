@@ -2,6 +2,7 @@ package com.tech.skill.forge.controller;
 
 import cn.hutool.core.lang.UUID;
 import cn.hutool.core.util.RandomUtil;
+import com.tech.skill.forge.common.ResponseVO;
 import com.tech.skill.forge.entity.User;
 import com.tech.skill.forge.service.db.UserSecureService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,21 +30,21 @@ public class UserController {
     RedisTemplate redisTemplate;
 
     @GetMapping("/register")
-    public String register(@RequestParam("id") String accountId) {
+    public ResponseVO register(@RequestParam("id") String accountId) {
         User user = new User();
         user.setAccountId(accountId);
         user.setNickname("king");
         user.setPassword("123456");
         user.setCreateTime(new Date());
         userSecureService.save(user);
-        return "";
+        return ResponseVO.success(user);
     }
 
     @GetMapping("/redis")
-    public String testRedis() {
+    public ResponseVO testRedis() {
         String s = RandomUtil.randomString(10);
         redisTemplate.opsForValue().set(s,s,20, TimeUnit.SECONDS);
-        return "";
+        return ResponseVO.success(s);
     }
 
 }
