@@ -58,7 +58,7 @@ public class RedisConfig {
         standaloneConfiguration.setHostName(redisProperties.getHost());
         standaloneConfiguration.setPort(redisProperties.getPort());
         standaloneConfiguration.setDatabase(redisProperties.getDatabase());
-        //standaloneConfiguration.setPassword("");
+        standaloneConfiguration.setPassword(redisProperties.getPassword());
 
         LettuceConnectionFactory connectionFactory = new LettuceConnectionFactory(standaloneConfiguration, clientConfiguration);
         connectionFactory.setDatabase(redisProperties.getDatabase());

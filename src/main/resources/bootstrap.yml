@@ -19,14 +19,16 @@ spring:
     name: skill-forge
   cloud:
     nacos:
-      server-addr: localhost:8848
+      server-addr: 124.71.214.64:8848
       username: nacos
+      #需要替换为正确密码,IDEA本地测试配置-Dspring.cloud.nacos.password=true_pwd
       password: nacos
       discovery:
         enabled: true
-        namespace: skill-forge-dev
-        cluster-name: CN
+        namespace: 90e74b29-6544-42bf-b01f-6aa09e6a17ec
+#        cluster-name: CN
       config:
         enabled: true
-        namespace: skill-forge-dev
+        namespace: 90e74b29-6544-42bf-b01f-6aa09e6a17ec
         file-extension: yml
+        prefix: application
