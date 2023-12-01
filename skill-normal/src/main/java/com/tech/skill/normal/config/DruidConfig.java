@@ -3,14 +3,14 @@ package com.tech.skill.normal.config;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
+import jakarta.servlet.Filter;
+import jakarta.servlet.Servlet;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.Filter;
-import javax.servlet.Servlet;
 import javax.sql.DataSource;
 
 /**
@@ -29,7 +29,7 @@ public class DruidConfig {
     @Bean
     public ServletRegistrationBean<Servlet> druidServlet() {
         // 进行 druid 监控的配置处理
-        ServletRegistrationBean<Servlet> srb = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
+        ServletRegistrationBean<Servlet> srb = new ServletRegistrationBean<>((Servlet) new StatViewServlet(), "/druid/*");
         // 白名单
         srb.addInitParameter("allow", "127.0.0.1");
         // 黑名单
@@ -46,7 +46,7 @@ public class DruidConfig {
     @Bean
     public FilterRegistrationBean<Filter> filterRegistrationBean() {
         FilterRegistrationBean<Filter> frb = new FilterRegistrationBean<>();
-        frb.setFilter(new WebStatFilter());
+        frb.setFilter((Filter) new WebStatFilter());
         // 所有请求进行监控处理
         frb.addUrlPatterns("/*");
         // 排除名单
