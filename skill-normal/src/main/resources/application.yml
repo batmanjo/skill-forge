@@ -72,16 +72,16 @@ spring:
     url: jdbc:mysql://localhost:3306/demo?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&zeroDateTimeBehavior=convertToNull
     password: 123456
     user: root
-  redis:
-    host: localhost
-    port: 6379
-    database: 1
-    connect-timeout: 10s
-    #默认使用lettuce
-    lettuce:
-      pool:
-        max-active: 200 #最大连接数
-        max-idle: 100 #最大空闲线程
-        max-wait: 10000 #阻塞时间，等待获取连接
-        min-idle: 10 #最小空闲线程
+  data:
+    redis:
+      connect-timeout: 10s
+      database: 1
+      port: 6379
+      host: localhost
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 8
+          max-wait: 1000
 
