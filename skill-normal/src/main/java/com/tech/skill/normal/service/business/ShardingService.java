@@ -2,10 +2,10 @@ package com.tech.skill.normal.service.business;
 
 import com.tech.skill.normal.entity.User;
 import com.tech.skill.normal.service.db.UserSecureService;
+import jakarta.annotation.Resource;
 import org.apache.shardingsphere.api.hint.HintManager;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.Date;
 
 /**

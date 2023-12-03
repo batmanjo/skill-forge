@@ -4,13 +4,14 @@ import cn.hutool.core.util.RandomUtil;
 import com.tech.skill.normal.common.ResponseVO;
 import com.tech.skill.normal.entity.User;
 import com.tech.skill.normal.service.db.UserSecureService;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
