@@ -47,7 +47,7 @@ public class DruidConfig {
     @Bean
     public FilterRegistrationBean<Filter> filterRegistrationBean() {
         FilterRegistrationBean<Filter> frb = new FilterRegistrationBean<>();
-        frb.setFilter((Filter) new WebStatFilter());
+        frb.setFilter(new WebStatFilter());
         // 所有请求进行监控处理
         frb.addUrlPatterns("/*");
         // 排除名单
