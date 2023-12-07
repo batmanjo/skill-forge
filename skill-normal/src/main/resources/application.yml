@@ -16,7 +16,7 @@ server:
 
 spring:
   application:
-    name: skill-forge
+    name: skill-normal
   shardingsphere:
     enabled: false
   datasource:
