@@ -10,6 +10,6 @@ import java.util.List;
  */
 @Data
 public class CalculatedSumDTO {
-    List<TwoNums> Nums;
+    List<TwoNums> nums;
     Integer max;
 }
