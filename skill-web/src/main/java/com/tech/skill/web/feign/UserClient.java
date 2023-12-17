@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UserClient {
 
 
-    @GetMapping("/register")
+    @GetMapping("/normal/register")
     String insertUser(@RequestParam("id") String accountId);
 }
