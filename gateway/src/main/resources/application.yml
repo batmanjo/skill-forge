@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: normal
+          uri: lb://skill-normal
+          predicates:
+            - Path=/normal/**
+        - id: web
+          uri: lb://skill-web
+          predicates:
+            - Path=/web/**
+

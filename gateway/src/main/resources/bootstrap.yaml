@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: 124.71.214.64:8848
+      username: nacos
+      #需要替换为正确密码,IDEA本地测试配置-Dspring.cloud.nacos.password=true_pwd
+      password: nacos
+      discovery:
+        enabled: true
+        namespace: 90e74b29-6544-42bf-b01f-6aa09e6a17ec
+
+

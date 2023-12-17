@@ -19,5 +19,8 @@
 - flyway简单使用
 - shardingSphere简单使用
 - nacos-discovery
+- nacos-config
+- open-feign
+- gateway
 
 

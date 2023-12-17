@@ -1,7 +1,7 @@
 server:
   port: 8082
   servlet:
-    context-path: /
+    context-path: /normal
   shutdown: graceful  #默认immediate
   tomcat:
     mbeanregistry:
