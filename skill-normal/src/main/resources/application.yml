@@ -85,5 +85,5 @@ spring:
           min-idle: 8
           max-wait: 1000
     mongodb:
-      uri: mongodb://localhost:27017/skill
+      database: skill
 
