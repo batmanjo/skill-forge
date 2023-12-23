@@ -84,4 +84,6 @@ spring:
           max-idle: 8
           min-idle: 8
           max-wait: 1000
+    mongodb:
+      database: skill
 
