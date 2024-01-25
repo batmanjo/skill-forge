@@ -43,7 +43,12 @@ public class MongoController {
         movie1.setName(movieName);
         Example<Movie> example = Example.of(movie1);
         Optional<Movie> one = movieRepo.findOne(example);
-        return ResponseVO.success(one);
+        //采用JPA自动生成的方式查询
+        //相关链接见：https://docs.spring.io/spring-data/jpa/reference/repositories/query-keywords-reference.html
+        Movie byName = movieRepo.getFirstByName(movieName);
+        List<Movie> movieByName = movieRepo.getMovieByName(movieName);
+        movieByName.forEach(System.out::println);
+        return ResponseVO.success(byName);
     }
 
     @GetMapping("save")
