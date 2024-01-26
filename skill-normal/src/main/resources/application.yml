@@ -85,5 +85,7 @@ spring:
           min-idle: 8
           max-wait: 1000
     mongodb:
+      host: localhost
+      port: 27017
       database: skill
 
