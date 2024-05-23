@@ -7,6 +7,7 @@
         <module>skill-normal</module>
         <module>skill-web</module>
         <module>gateway</module>
+        <module>skill-common</module>
     </modules>
     <groupId>com.tech</groupId>
     <artifactId>skill-forge</artifactId>
