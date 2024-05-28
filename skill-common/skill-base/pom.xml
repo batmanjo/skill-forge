@@ -5,16 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.tech</groupId>
-        <artifactId>skill-forge</artifactId>
+        <artifactId>skill-common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>skill-common</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>skill-database</module>
-        <module>skill-base</module>
-    </modules>
+    <artifactId>skill-base</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
