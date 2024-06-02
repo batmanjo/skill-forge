@@ -19,13 +19,13 @@ spring:
     name: skill-web
   cloud:
     nacos:
-      server-addr: 124.71.214.64:8848
+      server-addr: 112.74.72.41:8848
       username: nacos
       #需要替换为正确密码,IDEA本地测试配置-Dspring.cloud.nacos.password=true_pwd
       password: nacos
       discovery:
         enabled: true
-        namespace: 90e74b29-6544-42bf-b01f-6aa09e6a17ec
+        namespace: 16a34c95-cf0d-4245-904b-19dc0e7c2093
       #        cluster-name: CN
 #      config:
 #        enabled: true
