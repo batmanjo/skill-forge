@@ -29,7 +29,7 @@ public class ShardingService {
         //不设置hint的情况下,经测试，会生成4条SQL分别保存4张表
 //        userSecureService.save(user);
         //设置Hint的情况下,只保存了user_0
-        HintManager.getInstance().addTableShardingValue("user","99999999");
+        HintManager.getInstance().addTableShardingValue("user","0");
         userSecureService.save(user);
         return user;
     }

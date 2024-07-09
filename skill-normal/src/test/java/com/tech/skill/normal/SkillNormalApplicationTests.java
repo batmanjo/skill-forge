@@ -61,7 +61,7 @@ class SkillNormalApplicationTests {
 
     @Test
     void shardingRoute(){
-//        shardingService.saveUserByHint("111");
-        shardingService.saveUserByPrecise("666");
+        shardingService.saveUserByHint("1113");
+//        shardingService.saveUserByPrecise("666");
     }
 }
